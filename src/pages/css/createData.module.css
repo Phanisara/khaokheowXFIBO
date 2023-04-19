@@ -1,0 +1,113 @@
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    padding: 20px 60px 0px 60px;
+    color: #1A3D19;
+    font-size: 28px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.containData {
+    /* 77px: header, 83px: title*/
+    height: calc(100vh - (77px + 83px));
+}
+
+.data {
+    position: relative;
+    margin: 20px 40px 20px 40px;
+    /* 77px: header, 83px: title, 20px 20px: margin .data */
+    height: calc(100vh - (77px + 83px + 40px));
+    /* 60px: sidebar, 40px 40px: margin .data */
+    width: calc(100vw - (60px + 40px + 80px));
+    background-color: #d1d4bc3a;
+    border-radius: 8px;
+}
+
+.containerCreate {
+    overflow: auto;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    /* 77px: header, 83px: title, 20px 20px: margin .data */
+    height: calc(100vh - (77px + 83px + 40px + 180px));
+    /* 60px: sidebar, 40px 40px: margin .data */
+    width: calc(100vw - (60px + 40px + 80px + 600px));
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.formFormat {
+    position: relative;
+    overflow: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 660px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #393939;
+}
+
+.formGroup {
+    padding: 15px;
+    position: relative;
+    height: 30px;
+    width: 630px;
+}
+
+.startInput {
+    position: absolute;
+    margin-left: 180px;
+}
+
+.formGroup input {
+    position: absolute;
+    margin-left: 220px;
+    outline: none;
+    height: 38px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+}
+
+.formGroup input:hover {
+    background-color:  #d0d6aa20;
+}
+
+.formGroup input:focus {
+    border: 2px solid  #d0d6aa;
+}
+
+.formGroup label {
+    position: absolute;
+    padding-top: 9px;
+}
+
+.formGroupButton {
+    padding: 15px;
+    margin-left: 420px;
+}
+
+.btn {
+    margin-left: 20px;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    background-color: #d0d6aa;
+    border-style: none;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background-color: #C1BF30;
+}

@@ -1,0 +1,28 @@
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.title {
+    padding: 20px 60px;
+    color: #1A3D19;
+    font-size: 28px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.containData {
+    /* 76.6px: header, 82.4px: title*/
+    height: calc(100vh - (76.6px + 82.4px));
+}
+
+.data {
+    margin: 0px 40px 40px 40px;
+    /* 76.6px: header, 82.4px: title, 40px: margin .data */
+    height: calc(100vh - (76.6px + 82.4px + 40px));
+    /* 60px: sidebar, 40px 40px: margin .data */
+    width: calc(100vw - (60px + 40px + 40px));
+    background-color: #d1d4bc3a;
+    border-radius: 8px;
+}

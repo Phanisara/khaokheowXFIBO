@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+}
+
+.sidebar {
+    background-color: #D0D6AA;
+    padding: 0;
+    width: 200px;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.top {
+    margin: 30px 20px 40px 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.link {
+    display: flex;
+    color: #577958;
+    height: 25px;
+    padding: 15px 24px 15px 19px;
+    gap: 15px;
+    transition: all 0.5s;
+}
+
+.link:hover {
+    background: #e4e9c9;
+    transition: all 0.5s;
+}
+
+.icon {
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    position: center;
+}
+
+.text {
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
