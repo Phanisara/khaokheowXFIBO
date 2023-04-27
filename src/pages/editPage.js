@@ -1,7 +1,7 @@
-import {useState, useEffect} from 'react';
-import Axios from 'axios';
-import classes from './css/editData.module.css'
-import Header from '../components/Header';
+// import {useState, useEffect} from 'react';
+// import Axios from 'axios';
+// import classes from './css/editData.module.css'
+// import Header from '../components/Header';
 
 function EditPage() {
   // const [data, setData] = useState(null);
