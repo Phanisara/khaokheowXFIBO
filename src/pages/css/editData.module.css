@@ -25,3 +25,35 @@
     background-color: #d1d4bc3a;
     border-radius: 8px;
 }
+
+.containDropdown {
+    overflow: auto;
+    position: relative;
+    background-color: None;
+    /* 77px: header, 83px: title, 20px 20px: margin .data */
+    height: calc(100vh - (77px + 83px + 40px + 180px));
+    /* 60px: sidebar, 40px 40px: margin .data */
+    width: calc(100vw - (60px + 40px + 80px + 600px));
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.containDropdownList {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 15px;
+}
+
+.containDropdown select {
+    padding: 2px;
+    border-radius: 6px;
+    font-size: 13px;
+    width: 150px;
+    height: 30px;
+}
