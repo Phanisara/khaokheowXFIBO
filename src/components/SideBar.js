@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { NavLink} from 'react-router-dom'
 import list from './img/list.png'
 import data from './img/folder.png'
-import edit from './img/edit.png'
+import settings from './img/settings.png'
 import create from './img/add.png'
 import classes from './css/SideBar.module.css';
 
@@ -17,15 +17,16 @@ const SideBar = ({children}) => {
             icon: data
         },
         {
-            path:"/edit",
-            name:"Edit Data",
-            icon: edit
-        },
-        {
             path:"/create",
             name:"Create Data",
             icon: create
-        }]
+        },
+        {
+            path:"/setting-edit",
+            name:"Setting Data",
+            icon: settings
+        }
+        ]
 
     return (
         <div className={classes.container}>

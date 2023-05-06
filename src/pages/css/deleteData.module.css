@@ -76,6 +76,7 @@
     border-radius: 8px;
 }
 
+
 .containDropdown {
     overflow: auto;
     position: relative;
@@ -139,41 +140,26 @@
     color: #393939;
 }
 
-.inputID {
+.p3{
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    margin-left: 185px;
-    outline: none;
-    height: 30px;
-    width: 110px;
-    border-radius: 5px;
-    border: 1px solid rgb(220, 220, 220);
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 260px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #5a5a5a
 }
 
-.inputName {
+.p4{
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    margin-left: 390px;
-    outline: none;
-    height: 30px;
-    width: 110px;
-    border-radius: 5px;
-    border: 1px solid rgb(220, 220, 220);
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 730px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #5a5a5a
 }
 
-.containAnimalData input:hover {
-    background-color:  #d0d6aa20;
-}
-
-.containAnimalData input:focus {
-    border: 2px solid  #d0d6aa;
-}
 .containButton {
     position: absolute;
     top: 65%;

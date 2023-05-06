@@ -1,6 +1,8 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import HomePage from './pages/dataPage';
-import EditPage from './pages/editPage';
+import SettingPage from './pages/settingPage';
+import DeletePage from './pages/deletePage';
+import ActiveDeactivatePage from './pages/activeDeactivePage';
 import CreatePage from './pages/createPage';
 import SideNavBar from './components/SideBar';
 import './index.css'
@@ -12,8 +14,10 @@ function App() {
         <SideNavBar>
           <Routes>
             <Route path='/' element= {<HomePage/>} />
-            <Route path='/edit' element= {<EditPage/>} />
             <Route path='/create' element= {<CreatePage/>} />
+            <Route path='/setting-edit' element= {<SettingPage/>} />
+            <Route path='/setting-delete' element= {<DeletePage/>} />
+            <Route path='/setting-active-deactive' element= {<ActiveDeactivatePage/>} />
           </Routes>
         </SideNavBar>
       </Router>
