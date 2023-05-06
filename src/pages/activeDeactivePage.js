@@ -1,6 +1,6 @@
-import {useState, useEffect} from 'react';
-import {NavLink, Link} from 'react-router-dom'
-import Axios from 'axios';
+// import {useState, useEffect} from 'react';
+import {NavLink} from 'react-router-dom'
+// import Axios from 'axios';
 import classes from './css/activeDeactive.module.css'
 import Header from '../components/Header';
 
