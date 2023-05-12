@@ -75,3 +75,122 @@
     background-color: #d1d4bc3a;
     border-radius: 8px;
 }
+
+
+.containDropdown {
+    overflow: auto;
+    position: relative;
+    background-color: None;
+    /* 77px: header, 83px: title, 20px 20px: margin .data */
+    height: calc(100vh - (77px + 83px + 40px + 180px));
+    /* 60px: sidebar, 40px 40px: margin .data */
+    width: calc(100vw - (60px + 40px + 80px + 600px));
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.containDropdownList {  
+    position: absolute;
+    display: flex;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+}
+
+.selectStatus {
+    padding: 2px;
+    border-radius: 6px;
+    font-size: 13px;
+    width: 120px;
+    height: 30px;
+}
+
+.selectID {
+    padding: 2px;
+    border-radius: 6px;
+    font-size: 13px;
+    width: 180px;
+    height: 30px;
+}
+
+.containAnimalData {
+    position: absolute;
+    background-color: rgb(255, 255, 255);    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 500px;
+    border-radius: 6px;
+}
+
+.p1{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 140px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #393939;
+}
+
+.p2{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 580px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #393939;
+}
+
+.p3{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 260px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #5a5a5a
+}
+
+.p4{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 730px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #5a5a5a
+}
+
+.containButton {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 160px;
+    margin-right: 0px;
+}
+
+.btn {
+    margin-left: 10px;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    background-color: #d0d6aa;
+    border-style: none;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background-color: #C1BF30;
+}

@@ -11,7 +11,7 @@ function EditPage() {
   const [saveName, setSaveName] = useState(null);
 
   useEffect(() => {
-    setInterval(() => {Axios.get('https://script.google.com/macros/s/AKfycbzQHUlfpq22qj_Dp2V1_3ATkOI_yaoSe1K3Gz5WAIFX-nUpwqQPGT8xAzTJeJom16Lo/exec?readSheet=Conclusion')
+    setInterval(() => {Axios.get('https://script.google.com/macros/s/AKfycbwlOR-49zwh0fvhXdfmmt63H7AuXk9YMAOz-P_5i_JvLfjj-fM0CnMuCVoAYNAgi9IU/exec?readSheet=Conclusion')
     .then(res => setData(res.data)) // get the response data instead of the whole response object
     }, 5000);
   }, []);
@@ -105,7 +105,7 @@ function EditPage() {
     });
 
     const NAME = saveName;
-    Axios.get(`https://script.google.com/macros/s/AKfycbzQHUlfpq22qj_Dp2V1_3ATkOI_yaoSe1K3Gz5WAIFX-nUpwqQPGT8xAzTJeJom16Lo/exec?deleteSheet=${NAME}`)
+    Axios.get(`https://script.google.com/macros/s/AKfycbwlOR-49zwh0fvhXdfmmt63H7AuXk9YMAOz-P_5i_JvLfjj-fM0CnMuCVoAYNAgi9IU/exec?deleteSheet=${NAME}`)
         .then(res => console.log('Delete data!', res))
         .catch(err => console.log(err.response.data))
     window.location.reload(true)

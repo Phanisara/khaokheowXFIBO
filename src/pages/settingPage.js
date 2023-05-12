@@ -12,7 +12,7 @@ function EditPage() {
   const [saveNewName, setSaveNewName] = useState(null);
 
   useEffect(() => {
-    setInterval(() => {Axios.get('https://script.google.com/macros/s/AKfycbzQHUlfpq22qj_Dp2V1_3ATkOI_yaoSe1K3Gz5WAIFX-nUpwqQPGT8xAzTJeJom16Lo/exec?readSheet=Conclusion')
+    setInterval(() => {Axios.get('https://script.google.com/macros/s/AKfycbwlOR-49zwh0fvhXdfmmt63H7AuXk9YMAOz-P_5i_JvLfjj-fM0CnMuCVoAYNAgi9IU/exec?readSheet=Conclusion')
     .then(res => setData(res.data)) // get the response data instead of the whole response object
     }, 5000);
   }, []);
@@ -65,7 +65,7 @@ function EditPage() {
             
             <div className={classes.containButton}>
               <button type="cancel" className={classes.btn}>cancel</button>
-              <button type="save" className={classes.btn}>save</button>
+              <button type="save" className={classes.btn}>update</button>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ function EditPage() {
     const NEWNAME = saveNewName;
     const ID = saveID;
 
-    Axios.get(`https://script.google.com/macros/s/AKfycbzQHUlfpq22qj_Dp2V1_3ATkOI_yaoSe1K3Gz5WAIFX-nUpwqQPGT8xAzTJeJom16Lo/exec?editSheet=${NAME}&newName=${NEWNAME}&ID=${ID}`)
+    Axios.get(`https://script.google.com/macros/s/AKfycbwlOR-49zwh0fvhXdfmmt63H7AuXk9YMAOz-P_5i_JvLfjj-fM0CnMuCVoAYNAgi9IU/exec?editSheet=${NAME}&newName=${NEWNAME}&ID=${ID}`)
         .then(res => console.log('Edit data!', res))
         .catch(err => console.log(err.response.data))
     window.location.reload(true)
@@ -176,7 +176,7 @@ function EditPage() {
             
             <div className={classes.containButton}>
               <button type="cancel" className={classes.btn} onClick={cancel}>cancel</button>
-              <button type="save" className={classes.btn} onClick={save}>save</button>
+              <button type="save" className={classes.btn} onClick={save}>update</button>
             </div>
           </div>
         </div>

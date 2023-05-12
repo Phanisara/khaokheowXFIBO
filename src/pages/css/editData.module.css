@@ -97,7 +97,7 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    gap: 15px;
+    gap: 10px;
 }
 
 .containDropdown select {
@@ -174,15 +174,18 @@
 .containAnimalData input:focus {
     border: 2px solid  #d0d6aa;
 }
+
 .containButton {
     position: absolute;
-    top: 65%;
-    transform: translate(-50%, 0);
-    margin-left: 530px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 160px;
+    margin-right: 0px;
 }
 
 .btn {
-    margin-left: 20px;
+    margin-left: 10px;
     width: 80px;
     height: 30px;
     cursor: pointer;
