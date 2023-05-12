@@ -11,7 +11,7 @@ function DataSummaryPage() {
 
   useEffect(() => {
     Axios.get('https://script.google.com/macros/s/AKfycbwlOR-49zwh0fvhXdfmmt63H7AuXk9YMAOz-P_5i_JvLfjj-fM0CnMuCVoAYNAgi9IU/exec?readSheet=Conclusion')
-    .then(res => setData(res.data)) // get the response data instead of the whole response object
+    .then(res => setData(res.data)); // get the response data instead of the whole response object
   }, []);
 
   if (!data) {
@@ -111,17 +111,15 @@ function DataSummaryPage() {
                 </Table>
                 <nav className={classes.containPagination}>
                   <ul className={classes.pagination}>
-                    <li className={classes.pageItems}>
-                      <a href='/#' className={classes.pageLink} onClick={prePage}>previous</a>
-                      {
-                        number.map((val, idx) => (
-                          <li className={`${classes.pageItems} ${currentPage === val ? 'active' : ''}`} key={idx}>
-                            <a href='/#' className={classes.pageItems1} onClick={() => changePage(val)}>{val}</a>
-                          </li>
-                        ))
-                      }
-                      <a href='/#' className={classes.pageLink} onClick={nextPage}>next</a>
-                    </li>
+                    <a href='/#' className={classes.pageLink} onClick={prePage}>previous</a>
+                    {
+                      number.map((val, idx) => (
+                        <li className={`${classes.pageItems} ${currentPage === val ? 'active' : ''}`} key={idx}>
+                          <a href='/#' className={classes.pageItems1} onClick={() => changePage(val)}>{val}</a>
+                        </li>
+                      ))
+                    }
+                    <a href='/#' className={classes.pageLink} onClick={nextPage}>next</a>
                   </ul>
                 </nav>
             </div>

@@ -91,7 +91,7 @@ function EditPage() {
       }
     } 
     console.log(nameList);
-    setName(nameList);
+    setName(nameList.sort());
   }
 
   const changeName = (e) => {

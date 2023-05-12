@@ -118,7 +118,7 @@ function ActiveDeactivePage() {
       }
     } 
     console.log(nameList);
-    setName(nameList);
+    setName(nameList.sort());
   }
 
   const changeName = (e) => {

@@ -151,6 +151,10 @@ td {
 .pagination {
     position: relative;
     width: fit-content;
+    margin: 0;
+    gap: 5px;
+    display: flex;
+    align-items: baseline;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

@@ -94,11 +94,12 @@ function EditPage() {
       }
     } 
     console.log(nameList);
-    setName(nameList);
+    setName(nameList.sort());
   }
 
   const changeName = (e) => {
     setSaveName(String(e.target.value))
+    console.log(saveName);
   }
 
   const save = (e) => {
@@ -107,6 +108,10 @@ function EditPage() {
       saveName,
       saveNewName
     });
+
+    if (saveNewName === null) {
+      setSaveNewName(saveName);
+    }
 
     const NAME = saveName;
     const NEWNAME = saveNewName;
