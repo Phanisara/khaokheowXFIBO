@@ -109,13 +109,13 @@ function EditPage() {
       saveNewName
     });
 
-    if (saveNewName === null) {
-      setSaveNewName(saveName);
-    }
-
-    const NAME = saveName;
-    const NEWNAME = saveNewName;
+    let NAME = saveName;
+    let NEWNAME = saveNewName;
     const ID = saveID;
+
+    if (NEWNAME  === null) {
+      NEWNAME = NAME;
+    }
 
     Axios.get(`https://script.google.com/macros/s/AKfycbwlOR-49zwh0fvhXdfmmt63H7AuXk9YMAOz-P_5i_JvLfjj-fM0CnMuCVoAYNAgi9IU/exec?editSheet=${NAME}&newName=${NEWNAME}&ID=${ID}`)
         .then(res => console.log('Edit data!', res))
@@ -175,7 +175,7 @@ function EditPage() {
             <div className={classes.containAnimalData}>
                 <div className={classes.p1}>SYSTEM ID:</div>
                 <div className={classes.p2}>NAME:</div>
-                <input className={classes.inputID} placeholder={saveID} type="text" name="name" onChange={(e) => setSaveID(String(e.target.value))}/>
+                <input className={classes.inputID} placeholder={saveID} type="text" name="name" onChange={(e) => setSaveID(Number(e.target.value))}/>
                 <input className={classes.inputName} placeholder={saveName} type="text" name="name" onChange={(e) => setSaveNewName(String(e.target.value))}/>
             </div>
             
