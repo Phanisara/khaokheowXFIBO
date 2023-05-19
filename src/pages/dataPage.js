@@ -12,7 +12,7 @@ function DataPage() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    Axios.get('https://script.google.com/macros/s/AKfycbxdoWoNztaIT9qXGw3CM_igJi1kZl8u0d5VBvpV_TBAlMR_9pU8gsTNgBVLbdCky6Dq/exec?readSheet=Conclusion')
+    Axios.get('https://script.google.com/macros/s/AKfycbxhrUDhKk0OkOus8GjUbtF6unKpBVdDdKSh4YpCxjIvxeXFAlBMs4SX6XB7ukyW8GNW/exec?readSheet=Conclusion')
     .then(res => setSumData(res.data));
   }, []);
 
@@ -56,13 +56,13 @@ function DataPage() {
                       <thead>
                         <tr>
                           <th className={classes.thID1}>ID</th>
-                          <th className={classes.thID3}>Date</th>
-                          <th className={classes.thID3}>Time</th>
-                          <th className={classes.thID5}>Name</th>
-                          <th className={classes.thID5}>Type animal</th>
-                          <th className={classes.thID5}>Body weight (kg.)</th>
-                          <th className={classes.thID5}>Food weight (kg.)</th>
-                          <th className={classes.thID5}>Eating time (min)</th>
+                          <th className={classes.thID1}>Date</th>
+                          <th className={classes.thID1}>Time</th>
+                          <th className={classes.thID1}>Name</th>
+                          <th className={classes.thID1}>Animal</th>
+                          <th className={classes.thID1}>Body weight (kg.)</th>
+                          <th className={classes.thID1}>Food weight (kg.)</th>
+                          <th className={classes.thID1}>Eating time (min)</th>
                         </tr>
                       </thead>
                   </Table>
@@ -103,7 +103,7 @@ function DataPage() {
   }
 
   const getData = (e) => {
-    Axios.get(`https://script.google.com/macros/s/AKfycbxdoWoNztaIT9qXGw3CM_igJi1kZl8u0d5VBvpV_TBAlMR_9pU8gsTNgBVLbdCky6Dq/exec?readSheet=${e}`)
+    Axios.get(`https://script.google.com/macros/s/AKfycbxhrUDhKk0OkOus8GjUbtF6unKpBVdDdKSh4YpCxjIvxeXFAlBMs4SX6XB7ukyW8GNW/exec?readSheet=${e}`)
       .then(res => setData(res.data)); 
   }
   console.log(data);
@@ -168,13 +168,13 @@ function DataPage() {
                     <thead>
                       <tr>
                         <th className={classes.thID1}>ID</th>
-                        <th className={classes.thID3}>Date</th>
-                        <th className={classes.thID3}>Time</th>
-                        <th className={classes.thID5}>Name</th>
-                        <th className={classes.thID5}>Type animal</th>
-                        <th className={classes.thID5}>Body weight (kg.)</th>
-                        <th className={classes.thID5}>Food weight (kg.)</th>
-                        <th className={classes.thID5}>Eating time (min)</th>
+                        <th className={classes.thID1}>Date</th>
+                        <th className={classes.thID1}>Time</th>
+                        <th className={classes.thID1}>Name</th>
+                        <th className={classes.thID1}>Animal</th>
+                        <th className={classes.thID1}>Body weight (kg.)</th>
+                        <th className={classes.thID1}>Food weight (kg.)</th>
+                        <th className={classes.thID1}>Eating time (min)</th>
                       </tr>
                     </thead>
                   </Table>
@@ -231,26 +231,26 @@ function DataPage() {
                   <thead>
                     <tr>
                       <th className={classes.thID1}>ID</th>
-                      <th className={classes.thID3}>Date</th>
-                      <th className={classes.thID3}>Time</th>
-                      <th className={classes.thID5}>Name</th>
-                      <th className={classes.thID5}>Type animal</th>
-                      <th className={classes.thID5}>Body weight (kg.)</th>
-                      <th className={classes.thID5}>Food weight (kg.)</th>
-                      <th className={classes.thID5}>Eating time (min)</th>
+                      <th className={classes.thID1}>Date</th>
+                      <th className={classes.thID1}>Time</th>
+                      <th className={classes.thID1}>Name</th>
+                      <th className={classes.thID1}>Animal</th>
+                      <th className={classes.thID1}>Body weight (kg.)</th>
+                      <th className={classes.thID1}>Food weight (kg.)</th>
+                      <th className={classes.thID1}>Eating time (min)</th>
                     </tr>
                   </thead>
                   <tbody>
                     {records.map((val, idx) => (
                       <tr key={idx}>
                         <td className={classes.thID2}>{val.ID}</td>
-                        <td className={classes.thID4}>{val.Date}</td>
-                        <td className={classes.thID4}>{val.Time}</td>
-                        <td className={classes.thID6}>{val.Name}</td>
-                        <td className={classes.thID6}>{val.TypeAnimal}</td>
-                        <td className={classes.thID6}>{val.BodyWeight}</td>
-                        <td className={classes.thID6}>{val.FoodWeight}</td>
-                        <td className={classes.thID6}>{val.ETP}</td>
+                        <td className={classes.thID2}>{val.Date}</td>
+                        <td className={classes.thID2}>{val.Time}</td>
+                        <td className={classes.thID2}>{val.Name}</td>
+                        <td className={classes.thID2}>{val.TypeAnimal}</td>
+                        <td className={classes.thID2}>{val.BodyWeight}</td>
+                        <td className={classes.thID2}>{val.FoodWeight}</td>
+                        <td className={classes.thID2}>{val.ETP}</td>
                       </tr>
                     ))}
                   </tbody>

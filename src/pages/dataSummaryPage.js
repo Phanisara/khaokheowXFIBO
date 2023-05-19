@@ -10,8 +10,14 @@ function DataSummaryPage() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    Axios.get('https://script.google.com/macros/s/AKfycbxdoWoNztaIT9qXGw3CM_igJi1kZl8u0d5VBvpV_TBAlMR_9pU8gsTNgBVLbdCky6Dq/exec?readSheet=Conclusion')
+    Axios.get('https://script.google.com/macros/s/AKfycbxhrUDhKk0OkOus8GjUbtF6unKpBVdDdKSh4YpCxjIvxeXFAlBMs4SX6XB7ukyW8GNW/exec?readSheet=Conclusion')
     .then(res => setData(res.data)); // get the response data instead of the whole response object
+  }, []);
+
+  useEffect(() => {
+    setInterval(() => {Axios.get('https://script.google.com/macros/s/AKfycbxhrUDhKk0OkOus8GjUbtF6unKpBVdDdKSh4YpCxjIvxeXFAlBMs4SX6XB7ukyW8GNW/exec?readSheet=Conclusion')
+    .then(res => setData(res.data)) // get the response data instead of the whole response object
+    }, 5000);
   }, []);
 
   if (!data) {
@@ -43,7 +49,7 @@ function DataSummaryPage() {
                       <tr>
                         <th className={classes.thID1}>ID</th>
                         <th>Name</th>
-                        <th>Type animal</th>
+                        <th>Animal</th>
                         <th>Average weight (kg.)</th>
                         <th className={classes.thStatus}>Status</th>
                       </tr>
@@ -55,6 +61,8 @@ function DataSummaryPage() {
       </div>
     )
   }
+
+  data.sort((a, b) => a.ID - b.ID);
 
   const recordPerPage = 10;
   const lastIndex = currentPage * recordPerPage;
@@ -91,7 +99,7 @@ function DataSummaryPage() {
                       <tr>
                         <th className={classes.thID1}>ID</th>
                         <th>Name</th>
-                        <th>Type animal</th>
+                        <th>Animal</th>
                         <th>Average weight (kg.)</th>
                         <th>Status</th>
                       </tr>

@@ -22,7 +22,7 @@ function CreatePage() {
     const ID = id;
     const TYPE = type;
     const WEIGHT = weight;
-    Axios.get(`https://script.google.com/macros/s/AKfycbxdoWoNztaIT9qXGw3CM_igJi1kZl8u0d5VBvpV_TBAlMR_9pU8gsTNgBVLbdCky6Dq/exec?createNewSheet=${NAME}&ID=${ID}&Type=${TYPE}&FirstWeight=${WEIGHT}`)
+    Axios.get(`https://script.google.com/macros/s/AKfycbxhrUDhKk0OkOus8GjUbtF6unKpBVdDdKSh4YpCxjIvxeXFAlBMs4SX6XB7ukyW8GNW/exec?createNewSheet=${NAME}&ID=${ID}&Type=${TYPE}&FirstWeight=${WEIGHT}`)
         .then(res => console.log('Create data!!', res))
         .catch(err => console.log(err.response.data))
   };  
