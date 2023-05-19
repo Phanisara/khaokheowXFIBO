@@ -12,7 +12,7 @@ function DataPage() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    Axios.get('https://script.google.com/macros/s/AKfycbwlOR-49zwh0fvhXdfmmt63H7AuXk9YMAOz-P_5i_JvLfjj-fM0CnMuCVoAYNAgi9IU/exec?readSheet=Conclusion')
+    Axios.get('https://script.google.com/macros/s/AKfycbxdoWoNztaIT9qXGw3CM_igJi1kZl8u0d5VBvpV_TBAlMR_9pU8gsTNgBVLbdCky6Dq/exec?readSheet=Conclusion')
     .then(res => setSumData(res.data));
   }, []);
 
@@ -101,7 +101,7 @@ function DataPage() {
   }
 
   const getData = (e) => {
-    Axios.get(`https://script.google.com/macros/s/AKfycbwlOR-49zwh0fvhXdfmmt63H7AuXk9YMAOz-P_5i_JvLfjj-fM0CnMuCVoAYNAgi9IU/exec?readSheet=${e}`)
+    Axios.get(`https://script.google.com/macros/s/AKfycbxdoWoNztaIT9qXGw3CM_igJi1kZl8u0d5VBvpV_TBAlMR_9pU8gsTNgBVLbdCky6Dq/exec?readSheet=${e}`)
       .then(res => setData(res.data)); 
   }
   console.log(data);
@@ -144,37 +144,39 @@ function DataPage() {
   
           <div className={classes.containData}>
             <div className={classes.data}>
-              <div className={classes.containDropdown}>
-                <div className={classes.containDropdownList}>
-                  <select className={classes.selectID} onChange={changeID}>
-                    <option value="">Select ID of system</option>
-                    {allID.map((val, idx) => (
-                      <option key={idx} value={val}>{val}</option>))
-                    }
-                  </select>
-                  <select className={classes.selectID} onChange={changeName}>
-                    <option value="">Select Name of Animal</option>
-                    {name.map((val, idx) => (
-                      <option key={idx} value={val}>{val}</option>))
-                    }
-                  </select>
+              <div className={classes.dataPositions}> 
+                <div className={classes.containDropdown}>
+                  <div className={classes.containDropdownList}>
+                    <select className={classes.selectID} onChange={changeID}>
+                      <option value="">Select ID of system</option>
+                      {allID.map((val, idx) => (
+                        <option key={idx} value={val}>{val}</option>))
+                      }
+                    </select>
+                    <select className={classes.selectID} onChange={changeName}>
+                      <option value="">Select Name of Animal</option>
+                      {name.map((val, idx) => (
+                        <option key={idx} value={val}>{val}</option>))
+                      }
+                    </select>
+                  </div>
                 </div>
-              </div>
-              <div className={classes.containTable}>
-                <Table className={classes.table}>
-                  <thead>
-                    <tr>
-                      <th className={classes.thID1}>ID</th>
-                      <th className={classes.thID3}>Date</th>
-                      <th className={classes.thID3}>Time</th>
-                      <th className={classes.thID5}>Name</th>
-                      <th className={classes.thID5}>Type animal</th>
-                      <th className={classes.thID5}>Body weight (kg.)</th>
-                      <th className={classes.thID5}>Food weight (kg.)</th>
-                      <th className={classes.thID5}>Eating time (min)</th>
-                    </tr>
-                  </thead>
-                </Table>
+                <div className={classes.containTable}>
+                  <Table className={classes.table}>
+                    <thead>
+                      <tr>
+                        <th className={classes.thID1}>ID</th>
+                        <th className={classes.thID3}>Date</th>
+                        <th className={classes.thID3}>Time</th>
+                        <th className={classes.thID5}>Name</th>
+                        <th className={classes.thID5}>Type animal</th>
+                        <th className={classes.thID5}>Body weight (kg.)</th>
+                        <th className={classes.thID5}>Food weight (kg.)</th>
+                        <th className={classes.thID5}>Eating time (min)</th>
+                      </tr>
+                    </thead>
+                  </Table>
+                </div>
               </div>
             </div>
           </div>
@@ -205,64 +207,66 @@ function DataPage() {
 
         <div className={classes.containData}>
           <div className={classes.data}>
-            <div className={classes.containDropdown}>
-              <div className={classes.containDropdownList}>
-                <select className={classes.selectID} onChange={changeID}>
-                  <option value="">Select ID of system</option>
-                  {allID.map((val, idx) => (
-                    <option key={idx} value={val}>{val}</option>))
-                  }
-                </select>
-                <select className={classes.selectID} onChange={changeName}>
-                  <option value="">Select Name of Animal</option>
-                  {name.map((val, idx) => (
-                    <option key={idx} value={val}>{val}</option>))
-                  }
-                </select>
-              </div>
-            </div>
-            <div className={classes.containTable}>
-              <Table className={classes.table}>
-                <thead>
-                  <tr>
-                    <th className={classes.thID1}>ID</th>
-                    <th className={classes.thID3}>Date</th>
-                    <th className={classes.thID3}>Time</th>
-                    <th className={classes.thID5}>Name</th>
-                    <th className={classes.thID5}>Type animal</th>
-                    <th className={classes.thID5}>Body weight (kg.)</th>
-                    <th className={classes.thID5}>Food weight (kg.)</th>
-                    <th className={classes.thID5}>Eating time (min)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {records.map((val, idx) => (
-                    <tr key={idx}>
-                      <td className={classes.thID2}>{val.ID}</td>
-                      <td className={classes.thID4}>{val.Date}</td>
-                      <td className={classes.thID4}>{val.Time}</td>
-                      <td className={classes.thID6}>{val.Name}</td>
-                      <td className={classes.thID6}>{val.TypeAnimal}</td>
-                      <td className={classes.thID6}>{val.BodyWeight}</td>
-                      <td className={classes.thID6}>{val.FoodWeight}</td>
-                      <td className={classes.thID6}>{val.ETP}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-              <nav className={classes.containPagination}>
-                  <ul className={classes.pagination}>
-                    <a href='/data/#' className={classes.pageLink} onClick={prePage}>previous</a>
-                    {
-                      number.map((val, idx) => (
-                        <li className={`${classes.pageItems} ${currentPage === val ? 'active' : ''}`} key={idx}>
-                          <a href='/data/#' className={classes.pageItems1} onClick={() => changePage(val)}>{val}</a>
-                        </li>
-                      ))
+            <div className={classes.dataPositions}> 
+              <div className={classes.containDropdown}>
+                <div className={classes.containDropdownList}>
+                  <select className={classes.selectID} onChange={changeID}>
+                    <option value="">Select ID of system</option>
+                    {allID.map((val, idx) => (
+                      <option key={idx} value={val}>{val}</option>))
                     }
-                    <a href='/data/#' className={classes.pageLink} onClick={nextPage}>next</a>
-                  </ul>
-                </nav>
+                  </select>
+                  <select className={classes.selectID} onChange={changeName}>
+                    <option value="">Select Name of Animal</option>
+                    {name.map((val, idx) => (
+                      <option key={idx} value={val}>{val}</option>))
+                    }
+                  </select>
+                </div>
+              </div>
+              <div className={classes.containTable}>
+                <Table className={classes.table}>
+                  <thead>
+                    <tr>
+                      <th className={classes.thID1}>ID</th>
+                      <th className={classes.thID3}>Date</th>
+                      <th className={classes.thID3}>Time</th>
+                      <th className={classes.thID5}>Name</th>
+                      <th className={classes.thID5}>Type animal</th>
+                      <th className={classes.thID5}>Body weight (kg.)</th>
+                      <th className={classes.thID5}>Food weight (kg.)</th>
+                      <th className={classes.thID5}>Eating time (min)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {records.map((val, idx) => (
+                      <tr key={idx}>
+                        <td className={classes.thID2}>{val.ID}</td>
+                        <td className={classes.thID4}>{val.Date}</td>
+                        <td className={classes.thID4}>{val.Time}</td>
+                        <td className={classes.thID6}>{val.Name}</td>
+                        <td className={classes.thID6}>{val.TypeAnimal}</td>
+                        <td className={classes.thID6}>{val.BodyWeight}</td>
+                        <td className={classes.thID6}>{val.FoodWeight}</td>
+                        <td className={classes.thID6}>{val.ETP}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+                <nav className={classes.containPagination}>
+                    <ul className={classes.pagination}>
+                      <a href='/data/#' className={classes.pageLink} onClick={prePage}>previous</a>
+                      {
+                        number.map((val, idx) => (
+                          <li className={`${classes.pageItems} ${currentPage === val ? 'active' : ''}`} key={idx}>
+                            <a href='/data/#' className={classes.pageItems1} onClick={() => changePage(val)}>{val}</a>
+                          </li>
+                        ))
+                      }
+                      <a href='/data/#' className={classes.pageLink} onClick={nextPage}>next</a>
+                    </ul>
+                  </nav>
+              </div>
             </div>
           </div>
         </div>

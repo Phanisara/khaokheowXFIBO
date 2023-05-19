@@ -14,7 +14,7 @@ function ActiveDeactivePage() {
   const [saveName, setSaveName] = useState(null);
 
   useEffect(() => {
-    setInterval(() => {Axios.get('https://script.google.com/macros/s/AKfycbwlOR-49zwh0fvhXdfmmt63H7AuXk9YMAOz-P_5i_JvLfjj-fM0CnMuCVoAYNAgi9IU/exec?readSheet=Conclusion')
+    setInterval(() => {Axios.get('https://script.google.com/macros/s/AKfycbxdoWoNztaIT9qXGw3CM_igJi1kZl8u0d5VBvpV_TBAlMR_9pU8gsTNgBVLbdCky6Dq/exec?readSheet=Conclusion')
     .then(res => setData(res.data)) // get the response data instead of the whole response object
     }, 5000);
   }, []);
@@ -141,7 +141,7 @@ function ActiveDeactivePage() {
     }
 
     const NAME = saveName;
-    Axios.get(`https://script.google.com/macros/s/AKfycbwlOR-49zwh0fvhXdfmmt63H7AuXk9YMAOz-P_5i_JvLfjj-fM0CnMuCVoAYNAgi9IU/exec?de_acSheetName=${NAME}&status=${STATUS}`)
+    Axios.get(`https://script.google.com/macros/s/AKfycbxdoWoNztaIT9qXGw3CM_igJi1kZl8u0d5VBvpV_TBAlMR_9pU8gsTNgBVLbdCky6Dq/exec?de_acSheetName=${NAME}&status=${STATUS}`)
         .then(res => console.log('Change status!', res))
         .catch(err => console.log(err.response.data))
     window.location.reload(true)

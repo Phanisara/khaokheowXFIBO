@@ -77,6 +77,13 @@
     border-radius: 8px;
 }
 
+.dataPosition {
+    position: relative;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .containDropdown {
     position: relative;
     text-align: right;
@@ -89,7 +96,7 @@
     position: absolute;
     display: flex;
     top: 50%;
-    right: 1%;
+    right: 3%;
     transform: translate(0%, -50%);
     gap: 10px;
 }
