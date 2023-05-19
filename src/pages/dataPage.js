@@ -40,31 +40,33 @@ function DataPage() {
 
         <div className={classes.containData}>
           <div className={classes.data}>
-            <div className={classes.containDropdown}>
-              <div className={classes.containDropdownList}>
-                <select className={classes.selectID}>
-                  <option value="">Select ID of system</option>
-                </select>
-                <select className={classes.selectID}>
-                  <option value="">Select Name of Animal</option>
-                </select>
+            <div className={classes.dataPosition}> 
+              <div className={classes.containDropdown}>
+                <div className={classes.containDropdownList}>
+                  <select className={classes.selectID}>
+                    <option value="">Select ID of system</option>
+                  </select>
+                  <select className={classes.selectID}>
+                    <option value="">Select Name of Animal</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div className={classes.containTable}>
-              <Table className={classes.table}>
-                    <thead>
-                      <tr>
-                        <th className={classes.thID1}>ID</th>
-                        <th className={classes.thID3}>Date</th>
-                        <th className={classes.thID3}>Time</th>
-                        <th className={classes.thID5}>Name</th>
-                        <th className={classes.thID5}>Type animal</th>
-                        <th className={classes.thID5}>Body weight (kg.)</th>
-                        <th className={classes.thID5}>Food weight (kg.)</th>
-                        <th className={classes.thID5}>Eating time (min)</th>
-                      </tr>
-                    </thead>
-                </Table>
+              <div className={classes.containTable}>
+                <Table className={classes.table}>
+                      <thead>
+                        <tr>
+                          <th className={classes.thID1}>ID</th>
+                          <th className={classes.thID3}>Date</th>
+                          <th className={classes.thID3}>Time</th>
+                          <th className={classes.thID5}>Name</th>
+                          <th className={classes.thID5}>Type animal</th>
+                          <th className={classes.thID5}>Body weight (kg.)</th>
+                          <th className={classes.thID5}>Food weight (kg.)</th>
+                          <th className={classes.thID5}>Eating time (min)</th>
+                        </tr>
+                      </thead>
+                  </Table>
+              </div>
             </div>
           </div>
         </div>
@@ -144,7 +146,7 @@ function DataPage() {
   
           <div className={classes.containData}>
             <div className={classes.data}>
-              <div className={classes.dataPositions}> 
+              <div className={classes.dataPosition}> 
                 <div className={classes.containDropdown}>
                   <div className={classes.containDropdownList}>
                     <select className={classes.selectID} onChange={changeID}>

@@ -78,9 +78,13 @@
 }
 
 .dataPosition {
-    position: relative;
+    position: absolute;
+    /* 76.6px: header, 82.4px: title, 40px: margin .data */
+    height: calc(100vh - (76.6px + 82.4px + 40px));
+    /* 60px: sidebar, 40px 40px: margin .data */
+    width: calc(100vw - (60px + 40px + 40px));
     top: 50%;
-    right: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -89,14 +93,17 @@
     text-align: right;
     width: calc(100vw - (60px + 40px + 40px));
     height: 60px;
+    width: 1320px;
     background-color: none;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 .containDropdownList {  
     position: absolute;
     display: flex;
     top: 50%;
-    right: 3%;
+    right: 0%;
     transform: translate(0%, -50%);
     gap: 10px;
 }
